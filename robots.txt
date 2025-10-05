@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /editor/
+Disallow: /data/
+
+# Sitemap с автоопределением домена
+Sitemap: /sitemap.php

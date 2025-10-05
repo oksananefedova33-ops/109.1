@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="language" content="zh-Hans">
+<meta name="robots" content="index, follow">
+<title>你好</title>
+<meta name="description" content="你好">
+<link rel="canonical" href="{{BASE_URL}}/?lang=zh-Hans">
+<link rel="alternate" hreflang="ru" href="{{BASE_URL}}/">
+<link rel="alternate" hreflang="en" href="{{BASE_URL}}/?lang=en">
+<link rel="alternate" hreflang="zh-Hans" href="{{BASE_URL}}/?lang=zh-Hans">
+<link rel="alternate" hreflang="es" href="{{BASE_URL}}/?lang=es">
+<link rel="alternate" hreflang="fr" href="{{BASE_URL}}/?lang=fr">
+<link rel="alternate" hreflang="de" href="{{BASE_URL}}/?lang=de">
+<link rel="alternate" hreflang="it" href="{{BASE_URL}}/?lang=it">
+<link rel="alternate" hreflang="pt" href="{{BASE_URL}}/?lang=pt">
+<link rel="alternate" hreflang="ja" href="{{BASE_URL}}/?lang=ja">
+<link rel="alternate" hreflang="ko" href="{{BASE_URL}}/?lang=ko">
+<link rel="alternate" hreflang="nl" href="{{BASE_URL}}/?lang=nl">
+<link rel="alternate" hreflang="pl" href="{{BASE_URL}}/?lang=pl">
+<link rel="alternate" hreflang="tr" href="{{BASE_URL}}/?lang=tr">
+<link rel="alternate" hreflang="ar" href="{{BASE_URL}}/?lang=ar">
+<link rel="alternate" hreflang="cs" href="{{BASE_URL}}/?lang=cs">
+<link rel="alternate" hreflang="da" href="{{BASE_URL}}/?lang=da">
+<link rel="alternate" hreflang="el" href="{{BASE_URL}}/?lang=el">
+<link rel="alternate" hreflang="fi" href="{{BASE_URL}}/?lang=fi">
+<link rel="alternate" hreflang="hu" href="{{BASE_URL}}/?lang=hu">
+<link rel="alternate" hreflang="id" href="{{BASE_URL}}/?lang=id">
+<link rel="alternate" hreflang="no" href="{{BASE_URL}}/?lang=no">
+<link rel="alternate" hreflang="ro" href="{{BASE_URL}}/?lang=ro">
+<link rel="alternate" hreflang="sv" href="{{BASE_URL}}/?lang=sv">
+<link rel="alternate" hreflang="uk" href="{{BASE_URL}}/?lang=uk">
+<link rel="alternate" hreflang="bg" href="{{BASE_URL}}/?lang=bg">
+<link rel="alternate" hreflang="et" href="{{BASE_URL}}/?lang=et">
+<link rel="alternate" hreflang="lt" href="{{BASE_URL}}/?lang=lt">
+<link rel="alternate" hreflang="lv" href="{{BASE_URL}}/?lang=lv">
+<link rel="alternate" hreflang="sk" href="{{BASE_URL}}/?lang=sk">
+<link rel="alternate" hreflang="sl" href="{{BASE_URL}}/?lang=sl">
+<link rel="alternate" hreflang="x-default" href="{{BASE_URL}}/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="你好">
+<meta property="og:description" content="你好">
+<meta property="og:url" content="{{BASE_URL}}/?lang=zh-Hans">
+<meta property="og:site_name" content="это мой сайт">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gpt5-ai.pro/editor/uploads/file_68e039d1a0faf.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="你好">
+<meta name="twitter:description" content="你好">
+<meta name="twitter:image" content="https://gpt5-ai.pro/editor/uploads/file_68e039d1a0faf.jpg">
+<meta name="twitter:site" content="@sssssuuuuu">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","url":"{{BASE_URL}}","name":"это мой сайт","description":"это сайт про таблетки","inLanguage":"zh-Hans"},{"@context":"https://schema.org","@type":"Organization","name":"таблетки","url":"{{BASE_URL}}","logo":"assets/uploads/organization_logo_1759495925.jpg"},{"@context":"https://schema.org","@type":"WebPage","url":"{{BASE_URL}}/?lang=zh-Hans","name":"你好","description":"你好","inLanguage":"zh-Hans"}]</script>
+<script>
+/*
+  JS‑fallback: подменяет токен {{BASE_URL}} на реальный origin.
+  Исправляет href canonical / hreflang, og:url / og:image, twitter:image и JSON‑LD (url/logo/image).
+*/
+(function(){
+  try{
+    var origin = location.protocol + '//' + location.host;
+    var fix = function(v){ return v ? v.replace(/\{\{BASE_URL\}\}/g, origin) : v; };
+
+    // canonical
+    var c = document.querySelector('link[rel="canonical"]');
+    if (c) c.href = fix(c.getAttribute('href'));
+
+    // hreflang
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function(l){
+      l.href = fix(l.getAttribute('href'));
+    });
+
+    // Open Graph
+    ['og:url','og:image'].forEach(function(p){
+      document.querySelectorAll('meta[property="'+p+'"]').forEach(function(m){
+        var v = m.getAttribute('content'); if (!v) return;
+        if (v.indexOf('{{BASE_URL}}') !== -1) {
+          m.setAttribute('content', fix(v));
+        } else if (p==='og:image' && !/^https?:\/\//i.test(v)) {
+          m.setAttribute('content', origin.replace(/\/$/, '') + '/' + v.replace(/^\//,''));
+        }
+      });
+    });
+
+    // Twitter Card
+    document.querySelectorAll('meta[name="twitter:image"]').forEach(function(m){
+      var v = m.getAttribute('content'); if (!v) return;
+      if (v.indexOf('{{BASE_URL}}') !== -1) m.setAttribute('content', fix(v));
+      else if (!/^https?:\/\//i.test(v)) m.setAttribute('content', origin.replace(/\/$/, '') + '/' + v.replace(/^\//,''));
+    });
+
+    // JSON-LD
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
+      try{
+        var data = JSON.parse(s.textContent);
+        var arr = Array.isArray(data) ? data : [data];
+        var changed = false;
+        arr.forEach(function(o){
+          if (o && typeof o === 'object') {
+            if (o.url) { o.url = fix(o.url); changed = true; }
+            if (o.logo && typeof o.logo === 'string') { o.logo = fix(o.logo); changed = true; }
+            if (o.image && typeof o.image === 'string') { o.image = fix(o.image); changed = true; }
+          }
+        });
+        if (changed) s.textContent = JSON.stringify(arr);
+      }catch(e){}
+    });
+  }catch(e){}
+})();
+</script>
+<link rel="stylesheet" href="assets/style.css?v=20251003143445">
+</head>
+<body style="background-color: #0e141b;">
+    <div class="wrap" style="min-height: 2000px;"><div class="el box" style="left:2.50264%;top:44px;width:93.358%;height:30.1563vw;z-index:1;border-radius:8px;transform:rotate(0deg);opacity:1;background:rgb(255, 255, 255);border:1px solid rgba(95, 179, 255, 0.35);" id="el_gto65dl" data-type="box" data-tablet='{"id":"el_gto65dl","type":"box","left":2.50264,"top":44,"width":93.358,"height":24.125,"z":1,"radius":8,"rotate":0,"bg":"rgb(255, 255, 255)","border":"1px solid rgba(95, 179, 255, 0.35)"}' data-mobile='{"id":"el_gto65dl","type":"box","left":2.13333,"top":84,"width":96.558,"height":62.2583,"z":1,"radius":8,"rotate":0,"bg":"rgb(255, 255, 255)","border":"1px solid rgba(95, 179, 255, 0.35)"}'></div><div class="el text" style="left:3.34742%;top:71px;width:30%;height:auto;z-index:1;border-radius:8px;transform:rotate(0deg);opacity:1;font-size:20px;color:rgb(232, 242, 255);background:rgb(0, 0, 0);padding:8px;text-align:left;font-weight:normal;line-height:1.5;min-height:30px;word-wrap:break-word;overflow-wrap:break-word" id="el_cniylms" data-type="text" data-tablet='{"id":"el_cniylms","type":"text","left":3.34742,"top":71,"width":30,"height":0,"z":1,"radius":8,"rotate":0,"html":"<font color=\"#22c55e\">\u041f\u043e \u0442\u0435\u043a\u0443\u0449\u0435\u043c\u0443<\/font> <u>\u0444\u0430\u0439\u043b\u0443<\/u> <i><strong data-start=\"3454\" data-end=\"3464\">\u0432\u0441\u0451 \u043e\u043a<\/strong>: \u043f\u0440\u0438\u0432\u044f\u0437\u043a\u0430<\/i> \u043a \u0434\u043e\u043c\u0435\u043d\u0443 \u0443\u0431\u0440\u0430\u043d\u0430, \u043f\u0440\u0435\u0432\u044c\u044e\/\u043b\u043e\u0433\u043e\u0442\u0438\u043f\u044b \u043b\u043e\u043a\u0430\u043b\u0438\u0437\u0443\u044e\u0442\u0441\u044f, \u0442\u043e\u043a\u0435\u043d <code data-start=\"3528\" data-end=\"3542\">{{BASE_URL}}<\/code> \u0438 JS\u2011fallback \u0432\u044b\u0441\u0442\u0430\u0432\u043b\u044f\u044e\u0442 \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u044b\u0435 \u0430\u0431\u0441\u043e\u043b\u044e\u0442\u043d\u044b\u0435 URL \u0443\u0436\u0435 \u043d\u0430 \u0446\u0435\u043b\u0435\u0432\u043e\u043c \u0434\u043e\u043c\u0435\u043d\u0435. \u0415\u0441\u043b\u0438 \u0437\u0430\u0445\u043e\u0442\u0438\u0442\u0435 \u2014 \u043c\u043e\u0433\u0443 \u0432\u044b\u0441\u043b\u0430\u0442\u044c \u043c\u0438\u043d\u0438\u2011\u043f\u0430\u0442\u0447 \u0438\u0437 \u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0430\u0446\u0438\u0439 (1\u20132 \u043f\u0440\u0430\u0432\u043a\u0438 \u0432 \u0440\u0435\u0433\u044d\u043a\u0441\u043f \u0438 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435 JSON\u2011LD\u2011\u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0438), \u043d\u043e \u044d\u0442\u043e \u0443\u0436\u0435 \u00ab\u043c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u0438\u0437\u043c\u00bb, \u043d\u0435 \u00abmust\u2011have\u00bb.","fontSize":20,"color":"rgb(232, 242, 255)","bg":"rgb(0, 0, 0)"}' data-mobile='{"id":"el_cniylms","type":"text","left":4.14742,"top":447,"width":92.4,"height":0,"z":1,"radius":8,"rotate":0,"html":"<font color=\"#22c55e\">\u041f\u043e \u0442\u0435\u043a\u0443\u0449\u0435\u043c\u0443<\/font> <u>\u0444\u0430\u0439\u043b\u0443<\/u> <i><strong data-start=\"3454\" data-end=\"3464\">\u0432\u0441\u0451 \u043e\u043a<\/strong>: \u043f\u0440\u0438\u0432\u044f\u0437\u043a\u0430<\/i> \u043a \u0434\u043e\u043c\u0435\u043d\u0443 \u0443\u0431\u0440\u0430\u043d\u0430, \u043f\u0440\u0435\u0432\u044c\u044e\/\u043b\u043e\u0433\u043e\u0442\u0438\u043f\u044b \u043b\u043e\u043a\u0430\u043b\u0438\u0437\u0443\u044e\u0442\u0441\u044f, \u0442\u043e\u043a\u0435\u043d <code data-start=\"3528\" data-end=\"3542\">{{BASE_URL}}<\/code> \u0438 JS\u2011fallback \u0432\u044b\u0441\u0442\u0430\u0432\u043b\u044f\u044e\u0442 \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u044b\u0435 \u0430\u0431\u0441\u043e\u043b\u044e\u0442\u043d\u044b\u0435 URL \u0443\u0436\u0435 \u043d\u0430 \u0446\u0435\u043b\u0435\u0432\u043e\u043c \u0434\u043e\u043c\u0435\u043d\u0435. \u0415\u0441\u043b\u0438 \u0437\u0430\u0445\u043e\u0442\u0438\u0442\u0435 \u2014 \u043c\u043e\u0433\u0443 \u0432\u044b\u0441\u043b\u0430\u0442\u044c \u043c\u0438\u043d\u0438\u2011\u043f\u0430\u0442\u0447 \u0438\u0437 \u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0430\u0446\u0438\u0439 (1\u20132 \u043f\u0440\u0430\u0432\u043a\u0438 \u0432 \u0440\u0435\u0433\u044d\u043a\u0441\u043f \u0438 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435 JSON\u2011LD\u2011\u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0438), \u043d\u043e \u044d\u0442\u043e \u0443\u0436\u0435 \u00ab\u043c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u0438\u0437\u043c\u00bb, \u043d\u0435 \u00abmust\u2011have\u00bb.","fontSize":20,"color":"rgb(232, 242, 255)","bg":"rgb(0, 0, 0)"}'><font color="#22c55e">目前的</font><u>文件</u><i><strong data-start="3454" data-end="3464">一切正常</strong>：</i>域名<i>绑定</i>已移除，预览/<code data-start="3528" data-end="3542">logo</code>已本地化，<code data-start="3528" data-end="3542">{{BASE_URL}}</code>标记和 JS-fallback 已在目标域名上设置了正确的绝对 URL。如果您需要，我可以向您发送一个迷你建议补丁（对 regexp 和 JSON-LD 处理扩展进行 1-2 次编辑），但这已经是 "最大化"，而不是 "必须"。</div><div class="el image" style="left:36.9799%;top:73px;width:13.4425%;height:14.4271vw;z-index:1;border-radius:8px;transform:rotate(0deg);opacity:1" id="el_z1w2j6i" data-type="image" data-tablet='{"id":"el_z1w2j6i","type":"image","left":37.631,"top":88,"width":13.4425,"height":4.3417,"z":1,"radius":8,"rotate":0,"src":"https:\/\/gpt5-ai.pro\/editor\/uploads\/file_68e039d1a0faf.jpg"}' data-mobile='{"id":"el_z1w2j6i","type":"image","left":21.2466,"top":767,"width":59.3092,"height":11.5417,"z":1,"radius":8,"rotate":0,"src":"https:\/\/gpt5-ai.pro\/editor\/uploads\/file_68e039d1a0faf.jpg"}'><img src="https://gpt5-ai.pro/editor/uploads/file_68e039d1a0faf.jpg" alt="" style="width:100%;height:100%;object-fit:contain;" loading="lazy" decoding="async"></div><div class="el video" style="left:72.3548%;top:91px;width:20.623%;height:15.5729vw;z-index:1;border-radius:8px;transform:rotate(0deg);opacity:1" id="el_uinj6r1" data-type="video" data-tablet='{"id":"el_uinj6r1","type":"video","left":72.3548,"top":91,"width":20.623,"height":12.4583,"z":1,"radius":8,"rotate":0,"src":"https:\/\/gpt5-ai.pro\/editor\/uploads\/file_68e03a0febaff.mp4","controls":true,"autoplay":false,"loop":false,"muted":false}' data-mobile='{"id":"el_uinj6r1","type":"video","left":15.5548,"top":213,"width":68.623,"height":12.4583,"z":1,"radius":8,"rotate":0,"src":"https:\/\/gpt5-ai.pro\/editor\/uploads\/file_68e03a0febaff.mp4","controls":true,"autoplay":false,"loop":false,"muted":false}'><video src="https://gpt5-ai.pro/editor/uploads/file_68e03a0febaff.mp4" controls     style="width:100%;height:100%;object-fit:cover;"></video></div><div class="el linkbtn" style="left:53.8754%;top:107px;width:13.1045%;height:4.375vw;z-index:1;border-radius:12px;transform:rotate(0deg);opacity:1" id="el_sj339lk" data-type="linkbtn" data-tablet='{"id":"el_sj339lk","type":"linkbtn","left":55.6983,"top":99,"width":13.1045,"height":1.42,"z":1,"radius":12,"rotate":0,"text":"\u041a\u043d\u043e\u043f\u043a\u0430","url":"#","bg":"#3b82f6","color":"#ffffff","anim":"none"}' data-mobile='{"id":"el_sj339lk","type":"linkbtn","left":28.0088,"top":111,"width":46.4378,"height":3.5,"z":1,"radius":12,"rotate":0,"text":"\u041a\u043d\u043e\u043f\u043a\u0430","url":"#","bg":"#3b82f6","color":"#ffffff","anim":"none"}'>
+            <a class="bl-linkbtn bl-anim-none" href="https://claude.ai/new" target="_blank"
+               style="--bl-bg:#3b82f6;--bl-color:#ffffff;--bl-radius:12px;--bl-font-size:16px;" rel="noopener noreferrer">按钮</a>
+        </div><div class="el filebtn" style="left:5.98733%;top:374px;width:16.2197%;height:3.9583vw;z-index:1;border-radius:40px;transform:rotate(0deg);opacity:1" id="el_pkqaaeh" data-type="filebtn" data-tablet='{"id":"el_pkqaaeh","type":"filebtn","left":40.3624,"top":387,"width":20.6468,"height":1.3,"z":1,"radius":40,"rotate":0,"text":"\u0421\u043a\u0430\u0447\u0430\u0442\u044c \u0444\u0430\u0439\u043b 1","fileUrl":"#","fileName":"","bg":"#ec4899","color":"#ffffff"}' data-mobile='{"id":"el_pkqaaeh","type":"filebtn","left":25.454,"top":693,"width":46.0864,"height":3.16667,"z":1,"radius":40,"rotate":0,"text":"\u0421\u043a\u0430\u0447\u0430\u0442\u044c \u0444\u0430\u0439\u043b 1","fileUrl":"#","fileName":"","bg":"#ec4899","color":"#ffffff"}'>
+                    <a href="/editor/uploads/file_68e03aaee861f.jpg" download="паспорт.jpg" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;gap:8px;background:#ec4899;color:#ffffff;border-radius:inherit;text-decoration:none;font-weight:600;font-size:16px;transition:all 0.3s;">🖼️ 下载文件 1</a>
+                </div><div class="el langbadge" style="left:0.126716%;top:3px;width:9.18268%;height:2.9688vw;z-index:2;border-radius:8px;transform:rotate(0deg);opacity:1" id="el_l2omni3" data-type="langbadge" data-tablet='{"id":"el_l2omni3","type":"langbadge","left":0.126716,"top":3,"width":9.18268,"height":2.375,"z":2,"radius":8,"rotate":0,"langs":"ru,en,zh-Hans,es,fr,de,it,pt,ja,ko,nl,pl,tr,ar,cs,da,el,fi,hu,id,no,ro,sv,uk,bg,et,lt,lv,sk,sl","label":"\u042f\u0437\u044b\u043a\u0438","badgeColor":"#000000"}' data-mobile='{"id":"el_l2omni3","type":"langbadge","left":1.19338,"top":30,"width":18.7827,"height":2.66667,"z":2,"radius":8,"rotate":0,"langs":"ru,en,zh-Hans,es,fr,de,it,pt,ja,ko,nl,pl,tr,ar,cs,da,el,fi,hu,id,no,ro,sv,uk,bg,et,lt,lv,sk,sl","label":"\u042f\u0437\u044b\u043a\u0438","badgeColor":"#000000"}'><div class="lang-selector" onclick="this.querySelector('.lang-dropdown').classList.toggle('show')"><div class="lang-chip" style="background:#000000;border:1px solid #000000;color:#fff;font-size:14px;"><span class="lang-flag">🇨🇳</span><span class="lang-name">中文</span></div><div class="lang-dropdown"><a class="lang-option" href="index-ru.html"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span></a><a class="lang-option" href="index.html"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a><a class="lang-option active" href="index-zh-Hans.html"><span class="lang-flag">🇨🇳</span><span class="lang-name">中文</span></a><a class="lang-option" href="index-es.html"><span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span></a><a class="lang-option" href="index-fr.html"><span class="lang-flag">🇫🇷</span><span class="lang-name">Français</span></a><a class="lang-option" href="index-de.html"><span class="lang-flag">🇩🇪</span><span class="lang-name">Deutsch</span></a><a class="lang-option" href="index-it.html"><span class="lang-flag">🇮🇹</span><span class="lang-name">Italiano</span></a><a class="lang-option" href="index-pt.html"><span class="lang-flag">🇵🇹</span><span class="lang-name">Português</span></a><a class="lang-option" href="index-ja.html"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本語</span></a><a class="lang-option" href="index-ko.html"><span class="lang-flag">🇰🇷</span><span class="lang-name">한국어</span></a><a class="lang-option" href="index-nl.html"><span class="lang-flag">🇳🇱</span><span class="lang-name">Nederlands</span></a><a class="lang-option" href="index-pl.html"><span class="lang-flag">🇵🇱</span><span class="lang-name">Polski</span></a><a class="lang-option" href="index-tr.html"><span class="lang-flag">🇹🇷</span><span class="lang-name">Türkçe</span></a><a class="lang-option" href="index-ar.html"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span></a><a class="lang-option" href="index-cs.html"><span class="lang-flag">🇨🇿</span><span class="lang-name">Čeština</span></a><a class="lang-option" href="index-da.html"><span class="lang-flag">🇩🇰</span><span class="lang-name">Dansk</span></a><a class="lang-option" href="index-el.html"><span class="lang-flag">🇬🇷</span><span class="lang-name">Ελληνικά</span></a><a class="lang-option" href="index-fi.html"><span class="lang-flag">🇫🇮</span><span class="lang-name">Suomi</span></a><a class="lang-option" href="index-hu.html"><span class="lang-flag">🇭🇺</span><span class="lang-name">Magyar</span></a><a class="lang-option" href="index-id.html"><span class="lang-flag">🇮🇩</span><span class="lang-name">Indonesia</span></a><a class="lang-option" href="index-no.html"><span class="lang-flag">🇳🇴</span><span class="lang-name">Norsk</span></a><a class="lang-option" href="index-ro.html"><span class="lang-flag">🇷🇴</span><span class="lang-name">Română</span></a><a class="lang-option" href="index-sv.html"><span class="lang-flag">🇸🇪</span><span class="lang-name">Svenska</span></a><a class="lang-option" href="index-uk.html"><span class="lang-flag">🇺🇦</span><span class="lang-name">Українська</span></a><a class="lang-option" href="index-bg.html"><span class="lang-flag">🇧🇬</span><span class="lang-name">Български</span></a><a class="lang-option" href="index-et.html"><span class="lang-flag">🇪🇪</span><span class="lang-name">Eesti</span></a><a class="lang-option" href="index-lt.html"><span class="lang-flag">🇱🇹</span><span class="lang-name">Lietuvių</span></a><a class="lang-option" href="index-lv.html"><span class="lang-flag">🇱🇻</span><span class="lang-name">Latviešu</span></a><a class="lang-option" href="index-sk.html"><span class="lang-flag">🇸🇰</span><span class="lang-name">Slovenčina</span></a><a class="lang-option" href="index-sl.html"><span class="lang-flag">🇸🇮</span><span class="lang-name">Slovenščina</span></a></div></div></div>    </div>
+    <!-- Telegram notify -->
+    <script>window.TG_NOTIFY_API = 'https://gpt5-ai.pro/tg_notify_track.php';</script>
+    <script src="https://gpt5-ai.pro/ui/tg-notify/tracker.js?v=20251003143445" defer></script>
+    <!-- Analytics Tracker -->
+    <script src="assets/js/tracker.js?v=20251003143445" defer></script>
+    <script src="assets/js/main.js?v=20251003143445"></script>
+</body>
+</html>

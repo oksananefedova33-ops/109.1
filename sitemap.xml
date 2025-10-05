@@ -1,0 +1,3 @@
+<?php
+header('Location: /sitemap.php', true, 301);
+exit;
